@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Clone Stage') {
             steps {
-                git 'https://gitlab.com/jmlhmd/datacamp_docker_angular.git'
+                git 'https://github.com/xBlackAlpha/angular-app.git'
             }
         }
         stage('Docker Build') {
