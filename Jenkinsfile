@@ -31,7 +31,7 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'vm-agent', usernameVariable: 'USER', passwordVariable: 'PASS')]) {
                     bat """
-                        "C:\\Program Files\\PuTTY\\plink.exe" -ssh %USER%@192.168.1.21 -pw %PASS% -batch "docker pull salim178/angular-app:%DOCKER_TAG% && docker run -d -p 80:80 salim178/angular-app:%DOCKER_TAG%"
+                        "C:\\Program Files\\PuTTY\\plink.exe" -ssh %USER%@192.168.43.178 -pw %PASS% -batch "docker pull salim178/angular-app:%DOCKER_TAG% && docker run -d -p 80:80 salim178/angular-app:%DOCKER_TAG%"
                     """
                 }
             }
